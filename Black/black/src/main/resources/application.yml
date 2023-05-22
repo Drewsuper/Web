@@ -1,0 +1,26 @@
+
+spring:
+  mvc:
+    static-path-pattern: /StaticData/**
+  web:
+    resources:
+      static-locations: classpath:/static,classpath:/public,classpath:/resources,classpath:/META-INF/resources,file:StaticData
+  datasource:
+    url: jdbc:mysql://36.133.127.248:1002/store?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: Lf201807.
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    tomcat:
+      initSQL: SET NAMES utf8mb4 COLLATE utf8mb4_unicode_ci
+server:
+  port: 8880
+  servlet:
+    #    context-path: /api
+    session:
+      timeout: 0
+    encoding:
+      force: true
+      charset: UTF-8
+      enabled: true
+  tomcat:
+    uri-encoding: UTF-8
